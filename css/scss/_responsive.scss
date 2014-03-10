@@ -1,0 +1,10 @@
+@include max-screen($big-break) {
+	// e.g. iPad, tablets, small browsers
+}
+
+@include max-screen($small-break) {
+  // e.g. iPhone, mobile
+	body{
+		overflow-x:hidden;
+	}
+}

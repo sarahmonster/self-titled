@@ -1,0 +1,33 @@
+// Main layout styles go here
+#hello {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	
+	img {
+		@include circular;
+	}
+}
+
+#why {
+	border-top: 3px solid lighten($black, 40%);
+	border-bottom: 3px solid lighten($black, 20%);
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding-top: .5em;
+	padding-bottom: 2em;
+	
+	h4 {
+	  margin-top: 2em;
+	  color: lighten($black, 10%);
+	  
+	  i {
+		  margin-right: .5em;
+		  color: lighten($black, 60%);
+	  }
+	}
+}
+
+
+h2 strong {
+	text-decoration: underline;
+}

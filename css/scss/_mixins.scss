@@ -1,0 +1,45 @@
+@mixin clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020"; 
+    display: block; 
+    height: 0; 
+    overflow: hidden; 
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.clearfix, .group{
+  @include clearfix;
+}
+
+// Responsive mixins
+@mixin max-screen($res)
+{
+  @media screen and (max-width: $res)
+  {
+    @content;
+  }
+}
+
+@mixin min-screen($res)
+{
+  @media screen and (min-width: $res)
+  {
+    @content;
+  }
+}
+
+
+
+@mixin circular ($horizontal: 0px, $vertical: 2px, $shadow-width: 4px, $shadow-color: rgba(1, 2, 2, .25)) {
+	border-radius: 100%;
+	border: 10px solid #fff;
+    @include box-shadow;
+    
+    @media all and (max-width: 960px) {
+    	border-width: 6px;
+    }
+}

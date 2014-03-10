@@ -1,0 +1,12 @@
+@media print{
+	header, nav, footer, .btn-cta{
+		display:none;
+	}
+	img {
+		max-width:2in;
+	}
+	body{ 
+		font: 12pt $sans-serif;
+		line-height: 2.4; 
+	}
+}
