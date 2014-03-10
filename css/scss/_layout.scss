@@ -1,12 +1,41 @@
-// Main layout styles go here
+// General styles
+h2 strong {
+	text-decoration: underline;
+}
+
+.swap {
+	transition: 200ms all none;
+
+	.hide {
+		display: none;
+	}
+	
+	&:hover {
+		img:first-child {
+			display: none;
+		}
+		img.hide {
+			display: block;
+		}
+	}
+}
+
+
+
+
+// Header
+
 #hello {
 	margin-top: 2em;
 	margin-bottom: 2em;
 	
 	img {
-		@include circular;
+		@include circular(0px);
 	}
 }
+
+
+// Details
 
 #why {
 	border-top: 3px solid lighten($black, 40%);
@@ -25,9 +54,4 @@
 		  color: lighten($black, 60%);
 	  }
 	}
-}
-
-
-h2 strong {
-	text-decoration: underline;
 }
