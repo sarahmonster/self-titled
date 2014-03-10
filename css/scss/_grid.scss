@@ -1,7 +1,7 @@
 // 12 Column fluid and responsive grid
 
 .container{
-	max-width: 1200px;
+	max-width: 1040px;
 	margin: 0 auto;
 	padding: 0 10px;
 }
@@ -23,7 +23,6 @@
     }
 
     .group {
-        margin-left: -$margin;
     }
 
     .span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11{
