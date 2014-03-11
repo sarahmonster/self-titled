@@ -15,8 +15,11 @@
 
 @include min-screen($small-break) {
 
-    $unit: 4.2056333%; // Width of each grid column unit
-    $margin: 4.1277%; // Margin between the grid columns
+    $unit: 3%; // Width of each grid column unit
+    $margin: 5.8181818%; // Margin between the grid columns
+    
+    $margin: 6%;
+    $unit: (100% - ($margin * 11)) / 12;
 
     .container{
         padding: 20px;
@@ -27,10 +30,20 @@
 
     .span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11{
         float: left;
-        margin-left: $margin;
+        margin-left: $margin/2;
+        margin-right: $margin/2;
         margin-bottom: 0;
         @include box-sizing(border-box);
     }
+	
+	.span1:first-child,.span2:first-child,.span3:first-child,.span4:first-child,.span5:first-child,.span6:first-child,.span7:first-child,.span8:first-child,.span9:first-child,.span10:first-child,.span11:first-child{
+    	margin-left: 0;
+    }
+    
+    .span1:last-child,.span2:last-child,.span3:last-child,.span4:last-child,.span5:last-child,.span6:last-child,.span7:last-child,.span8:last-child,.span9:last-child,.span10:last-child,.span11:last-child{
+    	margin-right: 0;
+    }
+
 
     @for $i from 1 through 12 {
         .span#{$i} {
