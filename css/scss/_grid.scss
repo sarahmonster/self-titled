@@ -15,9 +15,6 @@
 
 @include min-screen($big-break) {
 
-    $unit: 3%; // Width of each grid column unit
-    $margin: 5.8181818%; // Margin between the grid columns
-    
     $margin: 6%;
     $unit: (100% - ($margin * 11)) / 12;
 
@@ -52,7 +49,8 @@
     }
     
     @for $i from 1 through 12 {
-        .push#{$i} {
+
+        .push#{$i}:first-child {
             margin-left: ($unit * $i) + ($margin * ($i - 1));
         }
     }
