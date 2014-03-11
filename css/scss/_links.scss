@@ -1,7 +1,7 @@
 // Text links
 a{
 	color:$primary-color;
-	@include vendorize(transition, all 1s ease);
+	@include vendorize(transition, all .5s ease-in);
 	
 	&:hover,&:focus{
 		text-decoration:none;
@@ -13,15 +13,15 @@ a{
 .btn{
   @include border-radius($btn-br);
   background:$tertiary-color;
-  border:none;
-  color:#fff;
+  border: 2px solid $tertiary-color;
+  color: $white;
+  font-family: $serif;
   text-decoration:none;
   text-shadow:0 1px 2px rgba(0,0,0,.2);
   display:inline-block;
   line-height:1;
   padding: 5px 10px;
-  text-transform: capitalize;
-  // @include box-shadow(inset 0 1px 0 rgba(255,255,255,.2),0 0 5px rgba(0,0,0,.05),0 1px 2px rgba(0,0,0,.2));
+  @include box-shadow(inset 0 1px 1px rgba(255,255,255,.25),0 0 5px rgba(0,0,0,.5));
   outline:none;
   &:hover,&:focus{
     background:darken($tertiary-color,5);
@@ -37,9 +37,12 @@ a{
 // Primary action button
 .btn-primary{
   @extend .btn;
-  background-color:$primary-color;
+  background-color: lighten($primary-color, 5%);
+  border-color: darken($primary-color, 1%);
+  color: lighten($primary-color, 60%);
   &:hover,&:focus{
     background-color:darken($primary-color,5);
+    color: $white;
   }
   &:active{
     background-color:darken($primary-color,10);
@@ -49,9 +52,12 @@ a{
 // Secondary action button
 .btn-secondary{
   @extend .btn;
-  background-color:$secondary-color;
+  background-color: lighten($secondary-color, 5%);
+  border-color: darken($secondary-color, 1%);
+  color: lighten($secondary-color, 45%);
   &:hover,&:focus{
     background-color:darken($secondary-color,5);
+    color: $white;
   }
   &:active{
     background-color:darken($secondary-color,10);
@@ -60,8 +66,9 @@ a{
 
 // Call to action - slightly bigger
 .btn-cta{
-  font-size:1.6em;
-  padding: .5em 1em;
+  font-size:1.2em;
+  padding: .75em 1.5em;
+  margin: 1em 1em;
 }
 
 // Link button - a button that looks like a link
