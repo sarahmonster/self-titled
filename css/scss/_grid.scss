@@ -27,6 +27,7 @@
 
     .span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11{
         float: left;
+        position: relative;
         margin-left: $margin/2;
         margin-right: $margin/2;
         margin-bottom: 0;
