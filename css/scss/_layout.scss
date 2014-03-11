@@ -1,7 +1,7 @@
 // General styles
 
 body {
-	background-color: $white;
+	background-color: lighten($white, 5%);
 }
 
 h2 strong {
