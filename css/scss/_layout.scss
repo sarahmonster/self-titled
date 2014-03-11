@@ -1,4 +1,9 @@
 // General styles
+
+body {
+	background-color: $white;
+}
+
 h2 strong {
 	text-decoration: underline;
 }
@@ -58,5 +63,26 @@ p strong {
 		  margin-right: .5em;
 		  color: lighten($black, 60%);
 	  }
+	}
+}
+
+
+// Mobile adjustments 
+
+@include max-screen($big-break) {
+	#hello {
+		padding-top: 2em;
+		padding-bottom: 1em;
+		
+		.swap {
+			display: none;
+		}
+	}
+}
+
+
+@include max-screen($small-break) {
+	#hello {
+		font-size: .7em;
 	}
 }

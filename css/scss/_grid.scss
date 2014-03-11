@@ -13,7 +13,7 @@
 
 // Grid columns are stacked until the display size is greater than min-width
 
-@include min-screen($small-break) {
+@include min-screen($big-break) {
 
     $unit: 3%; // Width of each grid column unit
     $margin: 5.8181818%; // Margin between the grid columns
