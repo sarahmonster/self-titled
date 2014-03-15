@@ -5,13 +5,12 @@ body {
 }
 
 h2 strong {
-	text-decoration: underline;
+	text-decoration: none;
+	color: lighten($secondary-color, 20%);
 }
 
 
 .swap {
-	
-
 
 	.hide {
 		opacity: 0;
@@ -20,7 +19,6 @@ h2 strong {
 		left: -5%;
 		max-width: 110%;
 		@include vendorize(transition, all .5s ease-in);
-
 	}
 	
 	&:hover {
