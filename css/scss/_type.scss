@@ -51,6 +51,29 @@ h4 {
   margin: 0 0 25px;
   font-weight: 400;
   font-style: normal;
+
+  span {
+    font-family: $script;
+    display: block;
+    text-transform: none;
+    font-size: 1.6em;
+    position: relative;
+    color: $primary-color;
+    font-weight: 300;
+    text-shadow: 2px 1px 0px $white;
+    z-index: 100;
+
+    &:before {
+      font-style: italic;
+      content: attr(data-title);
+      position: absolute;
+      width: 100%;
+      top: 2px;
+      left: 2px;
+      text-shadow: none;
+      z-index: -1;
+    }
+  }
 }
 
 h5 {
