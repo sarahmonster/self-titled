@@ -1,0 +1,87 @@
+/*
+Error: Undefined mixin 'colours'.
+        on line 57 of /Users/sarah/Dropbox/Sites/how-i-broke-up-with-photoshop/themes/style/custom.scss, in `colours'
+        from line 57 of /Users/sarah/Dropbox/Sites/how-i-broke-up-with-photoshop/themes/style/custom.scss
+
+52:   &.browsers { @include colour-scheme($green); }
+53:   &.end { @include colour-scheme($gold); }
+54: }
+55: 
+56: li {
+57:   &.intro { @include colours($blue); }
+58:   &.styletiles { @include colours($green); }
+59:   &.starters { @include colours($gold); }
+60:   &.sass { @include colours($pink); }
+61:   &.icons { @include colours($blue); }
+62:   &.browsers { @include colours($green); }
+
+Backtrace:
+/Users/sarah/Dropbox/Sites/how-i-broke-up-with-photoshop/themes/style/custom.scss:57:in `colours'
+/Users/sarah/Dropbox/Sites/how-i-broke-up-with-photoshop/themes/style/custom.scss:57
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:331:in `block in visit_mixin'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:98:in `block in with_mixin'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:98:in `with_mixin'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:329:in `visit_mixin'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:79:in `with_base'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:412:in `block (2 levels) in visit_rule'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:412:in `map'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:412:in `block in visit_rule'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:410:in `visit_rule'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:79:in `with_base'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:412:in `block (2 levels) in visit_rule'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:412:in `map'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:412:in `block in visit_rule'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:410:in `visit_rule'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:79:in `with_base'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:151:in `visit'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/root_node.rb:20:in `render'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/engine.rb:268:in `render'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/plugin/compiler.rb:486:in `update_stylesheet'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/plugin/compiler.rb:214:in `block in update_stylesheets'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/plugin/compiler.rb:208:in `each'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/plugin/compiler.rb:208:in `update_stylesheets'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/plugin/compiler.rb:464:in `on_file_changed'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/plugin/compiler.rb:324:in `block in watch'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:276:in `call'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:276:in `_process_changes'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:233:in `block in _wait_for_changes'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:216:in `loop'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:216:in `_wait_for_changes'
+/Users/sarah/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:312:in `block in _start_wait_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'colours'.\A         on line 57 of /Users/sarah/Dropbox/Sites/how-i-broke-up-with-photoshop/themes/style/custom.scss, in `colours'\A         from line 57 of /Users/sarah/Dropbox/Sites/how-i-broke-up-with-photoshop/themes/style/custom.scss\A \A 52:   &.browsers { @include colour-scheme($green); }\A 53:   &.end { @include colour-scheme($gold); }\A 54: }\A 55: \A 56: li {\A 57:   &.intro { @include colours($blue); }\A 58:   &.styletiles { @include colours($green); }\A 59:   &.starters { @include colours($gold); }\A 60:   &.sass { @include colours($pink); }\A 61:   &.icons { @include colours($blue); }\A 62:   &.browsers { @include colours($green); }"; }
