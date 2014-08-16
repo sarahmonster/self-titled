@@ -1,87 +1,822 @@
-/*
-Error: Undefined mixin 'colours'.
-        on line 57 of /Users/sarah/Dropbox/Sites/how-i-broke-up-with-photoshop/themes/style/custom.scss, in `colours'
-        from line 57 of /Users/sarah/Dropbox/Sites/how-i-broke-up-with-photoshop/themes/style/custom.scss
+/* Resets and base styles from HTML5 Boilerplate */
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display+SC:400,400italic,700,700italic,900,900italic);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url("/fonts/icons/styles.css");
+/* line 2, _reset.scss */
+div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-52:   &.browsers { @include colour-scheme($green); }
-53:   &.end { @include colour-scheme($gold); }
-54: }
-55: 
-56: li {
-57:   &.intro { @include colours($blue); }
-58:   &.styletiles { @include colours($green); }
-59:   &.starters { @include colours($gold); }
-60:   &.sass { @include colours($pink); }
-61:   &.icons { @include colours($blue); }
-62:   &.browsers { @include colours($green); }
+/* line 19, _reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 
-Backtrace:
-/Users/sarah/Dropbox/Sites/how-i-broke-up-with-photoshop/themes/style/custom.scss:57:in `colours'
-/Users/sarah/Dropbox/Sites/how-i-broke-up-with-photoshop/themes/style/custom.scss:57
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:331:in `block in visit_mixin'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:98:in `block in with_mixin'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:115:in `with_frame'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:98:in `with_mixin'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:329:in `visit_mixin'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:115:in `with_frame'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:79:in `with_base'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `visit'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:412:in `block (2 levels) in visit_rule'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:412:in `map'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:412:in `block in visit_rule'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:410:in `visit_rule'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:115:in `with_frame'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:79:in `with_base'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `visit'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:412:in `block (2 levels) in visit_rule'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:412:in `map'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:412:in `block in visit_rule'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:410:in `visit_rule'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:115:in `with_frame'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/stack.rb:79:in `with_base'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `visit'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:151:in `visit'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/tree/root_node.rb:20:in `render'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/engine.rb:268:in `render'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/plugin/compiler.rb:486:in `update_stylesheet'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/plugin/compiler.rb:214:in `block in update_stylesheets'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/plugin/compiler.rb:208:in `each'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/plugin/compiler.rb:208:in `update_stylesheets'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/plugin/compiler.rb:464:in `on_file_changed'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/sass-3.4.0.rc.3/lib/sass/plugin/compiler.rb:324:in `block in watch'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:276:in `call'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:276:in `_process_changes'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:233:in `block in _wait_for_changes'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:216:in `loop'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:216:in `_wait_for_changes'
-/Users/sarah/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:312:in `block in _start_wait_thread'
-*/
-body:before {
+/* line 24, _reset.scss */
+blockquote, q {
+  quotes: none;
+}
+/* line 27, _reset.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 33, _reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 39, _reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 46, _reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 50, _reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 55, _reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 60, _reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 69, _reset.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 73, _reset.scss */
+select, input, textarea, button {
+  font: 99% sans-serif;
+}
+
+/* line 77, _reset.scss */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* line 81, _reset.scss */
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+/* line 84, _reset.scss */
+a:hover, a:active {
+  outline: none;
+}
+
+/* line 89, _reset.scss */
+ul, ol {
+  margin-left: 2em;
+  vertical-align: top;
+}
+
+/* line 94, _reset.scss */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 99, _reset.scss */
+nav ul, nav li {
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 106, _reset.scss */
+small {
+  font-size: 85%;
+}
+
+/* line 110, _reset.scss */
+strong, th {
+  font-weight: bold;
+}
+
+/* line 114, _reset.scss */
+td {
+  vertical-align: top;
+}
+
+/* line 118, _reset.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+/* line 124, _reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 128, _reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 130, _reset.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 134, _reset.scss */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* line 138, _reset.scss */
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+/* line 142, _reset.scss */
+label,
+input[type="button"],
+input[type="submit"],
+input[type="image"],
+button {
+  cursor: pointer;
+}
+
+/* line 150, _reset.scss */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* line 155, _reset.scss */
+input:invalid, textarea:invalid {
+  border-radius: 1px;
+  -moz-box-shadow: 0px 0px 5px red;
+  -webkit-box-shadow: 0px 0px 5px red;
+  box-shadow: 0px 0px 5px red;
+}
+/* line 161, _reset.scss */
+input:invalid .no-boxshadow, textarea:invalid .no-boxshadow {
+  background-color: #f0dddd;
+}
+
+/* line 167, _reset.scss */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* line 172, _reset.scss */
+select, input, textarea {
+  color: #444;
+}
+
+/* line 176, _reset.scss */
+a {
+  color: #607890;
+}
+/* line 179, _reset.scss */
+a:hover, a:focus {
+  color: #036;
+}
+/* line 183, _reset.scss */
+a:link {
+  -webkit-tap-highlight-color: #fff;
+}
+
+/* End HTML5 Boilerplate adaptations */
+/* line 189, _reset.scss */
+h1 {
+  font-size: 4.5em;
+}
+
+/* line 193, _reset.scss */
+h1, .vcenter {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1em;
+  max-height: 100%;
+}
+/* line 199, _reset.scss */
+.csstransforms h1, .csstransforms .vcenter {
+  padding: 0 48px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+/* line 213, _reset.scss */
+.vcenter h1 {
+  position: relative;
+  top: auto;
+  padding: 0;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+/* line 224, _reset.scss */
+h2 {
+  font-size: 2.25em;
+  font-weight: bold;
+  padding-top: .5em;
+  margin: 0 0 .66666em 0;
+  border-bottom: 3px solid #888;
+}
+
+/* line 232, _reset.scss */
+h3 {
+  font-size: 1.4375em;
+  font-weight: bold;
+  margin-bottom: .30435em;
+}
+
+/* line 238, _reset.scss */
+h4 {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-bottom: .25em;
+}
+
+/* line 244, _reset.scss */
+h5 {
+  font-size: 1.125em;
+  font-weight: bold;
+  margin-bottom: .2222em;
+}
+
+/* line 250, _reset.scss */
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* line 255, _reset.scss */
+img, iframe, video {
+  display: block;
+  max-width: 100%;
+}
+
+/* line 260, _reset.scss */
+video, iframe, img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 265, _reset.scss */
+p, blockquote, iframe, img, ul, ol, pre, video {
+  margin-bottom: 1em;
+}
+
+/* line 269, _reset.scss */
+pre {
   white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'colours'.\A         on line 57 of /Users/sarah/Dropbox/Sites/how-i-broke-up-with-photoshop/themes/style/custom.scss, in `colours'\A         from line 57 of /Users/sarah/Dropbox/Sites/how-i-broke-up-with-photoshop/themes/style/custom.scss\A \A 52:   &.browsers { @include colour-scheme($green); }\A 53:   &.end { @include colour-scheme($gold); }\A 54: }\A 55: \A 56: li {\A 57:   &.intro { @include colours($blue); }\A 58:   &.styletiles { @include colours($green); }\A 59:   &.starters { @include colours($gold); }\A 60:   &.sass { @include colours($pink); }\A 61:   &.icons { @include colours($blue); }\A 62:   &.browsers { @include colours($green); }"; }
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 1em;
+  border: 1px solid #888;
+}
+
+/* line 277, _reset.scss */
+em {
+  font-style: italic;
+}
+
+/* line 281, _reset.scss */
+li {
+  padding: .25em 0;
+  vertical-align: middle;
+}
+/* line 285, _reset.scss */
+li > ol, li > ul {
+  margin-bottom: inherit;
+}
+
+/* line 290, _reset.scss */
+.deck-container {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #444;
+}
+
+/* line 296, _reset.scss */
+.slide {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* line 32, custom.scss */
+section.intro h2 {
+  border-color: #63A0BF;
+}
+/* line 33, custom.scss */
+section.intro h2 span {
+  color: #63A0BF;
+}
+/* line 34, custom.scss */
+section.intro h3 {
+  color: #63A0BF;
+}
+/* line 35, custom.scss */
+section.intro em {
+  color: #63A0BF;
+}
+/* line 36, custom.scss */
+section.intro i {
+  background-color: #63A0BF;
+}
+/* line 37, custom.scss */
+section.intro a {
+  color: #84959e;
+}
+/* line 39, custom.scss */
+section.intro a:hover {
+  color: #4688a9;
+  background-color: rgba(99, 160, 191, 0.2);
+}
+/* line 32, custom.scss */
+section.styletiles h2 {
+  border-color: #749E54;
+}
+/* line 33, custom.scss */
+section.styletiles h2 span {
+  color: #749E54;
+}
+/* line 34, custom.scss */
+section.styletiles h3 {
+  color: #749E54;
+}
+/* line 35, custom.scss */
+section.styletiles em {
+  color: #749E54;
+}
+/* line 36, custom.scss */
+section.styletiles i {
+  background-color: #749E54;
+}
+/* line 37, custom.scss */
+section.styletiles a {
+  color: #797a78;
+}
+/* line 39, custom.scss */
+section.styletiles a:hover {
+  color: #5c7d42;
+  background-color: rgba(116, 158, 84, 0.2);
+}
+/* line 32, custom.scss */
+section.starters h2 {
+  border-color: #E2CB58;
+}
+/* line 33, custom.scss */
+section.starters h2 span {
+  color: #E2CB58;
+}
+/* line 34, custom.scss */
+section.starters h3 {
+  color: #E2CB58;
+}
+/* line 35, custom.scss */
+section.starters em {
+  color: #E2CB58;
+}
+/* line 36, custom.scss */
+section.starters i {
+  background-color: #E2CB58;
+}
+/* line 37, custom.scss */
+section.starters a {
+  color: #c5b775;
+}
+/* line 39, custom.scss */
+section.starters a:hover {
+  color: #dabd2d;
+  background-color: rgba(226, 203, 88, 0.2);
+}
+/* line 32, custom.scss */
+section.sass h2 {
+  border-color: #E8A4C1;
+}
+/* line 33, custom.scss */
+section.sass h2 span {
+  color: #E8A4C1;
+}
+/* line 34, custom.scss */
+section.sass h3 {
+  color: #E8A4C1;
+}
+/* line 35, custom.scss */
+section.sass em {
+  color: #E8A4C1;
+}
+/* line 36, custom.scss */
+section.sass i {
+  background-color: #E8A4C1;
+}
+/* line 37, custom.scss */
+section.sass a {
+  color: #d7b5c4;
+}
+/* line 39, custom.scss */
+section.sass a:hover {
+  color: #de7ba5;
+  background-color: rgba(232, 164, 193, 0.2);
+}
+/* line 32, custom.scss */
+section.icons h2 {
+  border-color: #63A0BF;
+}
+/* line 33, custom.scss */
+section.icons h2 span {
+  color: #63A0BF;
+}
+/* line 34, custom.scss */
+section.icons h3 {
+  color: #63A0BF;
+}
+/* line 35, custom.scss */
+section.icons em {
+  color: #63A0BF;
+}
+/* line 36, custom.scss */
+section.icons i {
+  background-color: #63A0BF;
+}
+/* line 37, custom.scss */
+section.icons a {
+  color: #84959e;
+}
+/* line 39, custom.scss */
+section.icons a:hover {
+  color: #4688a9;
+  background-color: rgba(99, 160, 191, 0.2);
+}
+/* line 32, custom.scss */
+section.browsers h2 {
+  border-color: #749E54;
+}
+/* line 33, custom.scss */
+section.browsers h2 span {
+  color: #749E54;
+}
+/* line 34, custom.scss */
+section.browsers h3 {
+  color: #749E54;
+}
+/* line 35, custom.scss */
+section.browsers em {
+  color: #749E54;
+}
+/* line 36, custom.scss */
+section.browsers i {
+  background-color: #749E54;
+}
+/* line 37, custom.scss */
+section.browsers a {
+  color: #797a78;
+}
+/* line 39, custom.scss */
+section.browsers a:hover {
+  color: #5c7d42;
+  background-color: rgba(116, 158, 84, 0.2);
+}
+/* line 32, custom.scss */
+section.end h2 {
+  border-color: #E2CB58;
+}
+/* line 33, custom.scss */
+section.end h2 span {
+  color: #E2CB58;
+}
+/* line 34, custom.scss */
+section.end h3 {
+  color: #E2CB58;
+}
+/* line 35, custom.scss */
+section.end em {
+  color: #E2CB58;
+}
+/* line 36, custom.scss */
+section.end i {
+  background-color: #E2CB58;
+}
+/* line 37, custom.scss */
+section.end a {
+  color: #c5b775;
+}
+/* line 39, custom.scss */
+section.end a:hover {
+  color: #dabd2d;
+  background-color: rgba(226, 203, 88, 0.2);
+}
+
+/* line 61, custom.scss */
+li.intro {
+  color: #63A0BF;
+}
+/* line 62, custom.scss */
+li.styletiles {
+  color: #749E54;
+}
+/* line 63, custom.scss */
+li.starters {
+  color: #E2CB58;
+}
+/* line 64, custom.scss */
+li.sass {
+  color: #E8A4C1;
+}
+/* line 65, custom.scss */
+li.icons {
+  color: #63A0BF;
+}
+/* line 66, custom.scss */
+li.browsers {
+  color: #749E54;
+}
+/* line 67, custom.scss */
+li.end {
+  color: #E2CB58;
+}
+
+/* line 72, custom.scss */
+img {
+  box-sizing: border-box;
+}
+
+/* line 73, custom.scss */
+.circle {
+  border-radius: 50%;
+  max-width: 30%;
+  float: left;
+  margin: 2em 5em 0 2em;
+}
+/* line 78, custom.scss */
+.circle + ul {
+  max-width: 70%;
+}
+
+/* line 81, custom.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+}
+
+/* line 85, custom.scss */
+h1 {
+  color: #E8A4C1;
+  font-weight: 900;
+  font-size: 4em;
+  line-height: 1em;
+}
+/* line 91, custom.scss */
+h1 em {
+  display: block;
+  color: #749E54;
+  font-weight: 500;
+  font-style: italic;
+  font-size: .5em;
+  text-transform: none;
+}
+
+/* line 101, custom.scss */
+h2 {
+  margin: .5em 0 .25em 1em;
+  padding: 0.25em 1em;
+  border-bottom: 0;
+  background: #403d38;
+  color: #f9f9f5;
+  border-left: 10px solid #749E54;
+  font-size: 2.4em;
+  font-weight: 700;
+  text-shadow: tranparentize(white, 0.5) 0 1px 0;
+}
+/* line 112, custom.scss */
+h2 span {
+  display: block;
+  font-weight: 500;
+  font-style: italic;
+  font-size: .5em;
+}
+
+/* line 120, custom.scss */
+h3 {
+  font-family: "Playfair Display SC";
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  margin-top: 1em;
+  text-shadow: tranparentize(white, 0.5) 0 1px 0;
+}
+
+/* line 128, custom.scss */
+pre {
+  border: none;
+  padding: 0;
+}
+
+/* line 133, custom.scss */
+code {
+  margin: -3em 0 -6em -6em;
+  font-size: .5em;
+}
+
+/* line 138, custom.scss */
+ul, ol {
+  margin: 2em 4em;
+  max-width: 60%;
+}
+/* line 141, custom.scss */
+ul.bulletless, ol.bulletless {
+  list-style-type: none;
+}
+/* line 143, custom.scss */
+ul.bulletless a, ol.bulletless a {
+  text-decoration: none;
+}
+/* line 145, custom.scss */
+ul li, ol li {
+  margin: .75em 0;
+}
+
+/* line 148, custom.scss */
+.one-col, .two-col {
+  margin: 0 1em 0 3em;
+  max-height: 100%;
+}
+
+/* line 153, custom.scss */
+.one-col img {
+  width: 100%;
+}
+
+/* line 159, custom.scss */
+.two-col img, .two-col div {
+  width: 48%;
+  margin-right: 2%;
+  float: left;
+}
+/* line 163, custom.scss */
+.two-col img:nth-of-type(even), .two-col div:nth-of-type(even) {
+  margin-right: 0;
+}
+/* line 166, custom.scss */
+.two-col img {
+  background: white;
+  padding: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* line 169, custom.scss */
+em {
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: .85em;
+}
+
+/* line 175, custom.scss */
+::-moz-selection {
+  background: #403d38;
+  color: #f9f9f5;
+}
+
+/* line 176, custom.scss */
+::selection {
+  background: #403d38;
+  color: #f9f9f5;
+}
+
+/* line 178, custom.scss */
+i {
+  margin-right: 5px;
+  padding: .15em;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  color: #f9f9f5;
+  background-color: #403d38;
+  border-radius: 50%;
+}
+/* line 188, custom.scss */
+i.sample {
+  margin: .4em .2em;
+  padding: .45em;
+  font-size: 8em;
+  border: 10px solid #f9f9f5;
+  background-color: #E8A4C1;
+  transition: all 0.3s ease-out 0s;
+  cursor: pointer;
+}
+/* line 197, custom.scss */
+i.sample:hover {
+  background-color: rgba(232, 164, 193, 0.25);
+  color: #E8A4C1;
+  border-color: #E8A4C1;
+}
+
+/* line 206, custom.scss */
+a {
+  color: #c0bdb7;
+  text-decoration: underline;
+  transition: all 0.3s ease-out 0s;
+}
+/* line 211, custom.scss */
+a:hover, a:focus {
+  color: #908a81;
+  background: rgba(192, 189, 183, 0.9);
+  text-decoration: none;
+}
+
+/* line 218, custom.scss */
+.deck-container {
+  background: #f9f9f5;
+  color: #403d38;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 1.75em;
+}
+/* line 224, custom.scss */
+.deck-container > .slide {
+  padding: 0;
+}
+
+/* line 230, custom.scss */
+.slide .deck-before, .slide .deck-previous {
+  opacity: 0.4;
+}
+/* line 234, custom.scss */
+.slide .deck-before:not(.deck-child-current) .deck-before, .slide .deck-before:not(.deck-child-current) .deck-previous, .slide .deck-previous:not(.deck-child-current) .deck-before, .slide .deck-previous:not(.deck-child-current) .deck-previous {
+  opacity: 1;
+}
+/* line 240, custom.scss */
+.slide .deck-child-current {
+  opacity: 1;
+}
+
+/* line 245, custom.scss */
+.deck-prev-link, .deck-next-link {
+  background: #ccc;
+  font-family: serif;
+}
+/* line 249, custom.scss */
+.deck-prev-link, .deck-prev-link:hover, .deck-prev-link:focus, .deck-prev-link:active, .deck-prev-link:visited, .deck-next-link, .deck-next-link:hover, .deck-next-link:focus, .deck-next-link:active, .deck-next-link:visited {
+  color: #fff;
+}
+/* line 253, custom.scss */
+.deck-prev-link:hover, .deck-prev-link:focus, .deck-next-link:hover, .deck-next-link:focus {
+  background: #c00;
+  text-decoration: none;
+}
+
+/* line 259, custom.scss */
+.deck-status {
+  font-size: 0.6666em;
+}
+
+/* line 264, custom.scss */
+.deck-menu .slide {
+  background: #eee;
+}
+/* line 268, custom.scss */
+.deck-menu .deck-current, .no-touch .deck-menu .slide:hover {
+  background: #ddf;
+}
